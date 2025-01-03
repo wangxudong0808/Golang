@@ -76,4 +76,5 @@ func main() {
 	fmt.Println(&ss[1])
 	fmt.Println(&ss2[1])
 	fmt.Println(&ss3[1])
+
 }
