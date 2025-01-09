@@ -114,7 +114,7 @@ func main() {
 			}
 		case "5":
 			{
-				break
+				continue
 			}
 		case "6":
 			fmt.Println("打印所有用户信息")

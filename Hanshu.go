@@ -66,6 +66,7 @@ func selectNumber(x, y int) (sum, sub int) {
 // 变量的作用域：先从函数里找变量，再从gloab里找，然后从内键里找，都找不到的话就报错
 // 函数拥有开辟作用域的能力
 // 全局变量只能使用var进行声明，局部的变量可以使用:=声明
+// if 和 for 都会开辟作用域
 func test() {
 	var x = 100
 	fmt.Println(x)
