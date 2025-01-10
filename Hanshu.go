@@ -80,23 +80,22 @@ func main() {
 	//sumDoubleNumber(1, 100) // 实际参数
 	//sumDonotLength(1, 2, 3, 4, 5, 6, 7)
 	//fmt.Println(returnValue(1, 2, 3, 4, 5, 6, 7))
-	/*
-		var username, password string
-		fmt.Println("请输入用户名:")
-		fmt.Scanln(&username)
-		fmt.Println("请输入密码")
-		fmt.Scanln(&password)
-		status, user := loginUser(username, password)
-		if status {
-			fmt.Printf("登录成功，用户为%s\n", user)
-		} else {
-			fmt.Println("登录失败，用户名或密码错误")
-		}
-	*/
+
+	var username, password string
+	fmt.Println("请输入用户名:")
+	fmt.Scanln(&username)
+	fmt.Println("请输入密码")
+	fmt.Scanln(&password)
+	status, user := loginUser(username, password)
+	if status {
+		fmt.Printf("登录成功，用户为%s\n", user)
+	} else {
+		fmt.Println("登录失败，用户名或密码错误")
+	}
 
 	//返回值命名
-	fmt.Println(add2(1, 2, 3))
-	test()
-	fmt.Println(x)
-	fmt.Println(&x)
+	//fmt.Println(add2(1, 2, 3))
+	//test()
+	//fmt.Println(x)
+	//fmt.Println(&x)
 }
