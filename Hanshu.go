@@ -46,7 +46,6 @@ func loginUser(use string, pwd string) (bool, string) {
 	} else {
 		return false, ""
 	}
-
 }
 
 // 返回值命名
@@ -98,4 +97,31 @@ func main() {
 	//test()
 	//fmt.Println(x)
 	//fmt.Println(&x)
+}
+
+func qaddCluster(sys_test []map[string]string) []map[string]string {
+	var name, gender, mail, age, select_number_bool string
+	for true {
+		fmt.Println("---------------添加客户开始-----------------------")
+		fmt.Print("姓名:")
+		fmt.Scan(&name)
+		fmt.Print("性别:")
+		fmt.Scan(&gender)
+		fmt.Print("年龄:")
+		fmt.Scan(&age)
+		fmt.Print("邮箱:")
+		fmt.Scan(&mail)
+		fmt.Print("用户添加成功，是否返回上一层[y/n]：")
+		fmt.Scan(&select_number_bool)
+		if select_number_bool == "y" {
+			fmt.Println("退出")
+			break
+		} else if select_number_bool == "n" {
+			continue
+		}
+	}
+	var xinxi_bucket = map[string]string{"客户姓名": name, "客户性别": gender, "客户年龄": age, "客户邮箱": mail}
+	x := append(sys_test, xinxi_bucket)
+	fmt.Println(x)
+	return x
 }
