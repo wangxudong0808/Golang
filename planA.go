@@ -4,7 +4,9 @@ import (
 	"fmt"
 )
 
-//{"客户姓名": name,"客户性别": gender,"客户年龄": age,"客户邮箱": mail}}
+// {"客户姓名": name,"客户性别": gender,"客户年龄": age,"客户邮箱": mail}}
+var sys_test = []map[string]string{}
+var select_number_bool string
 
 func addCluster() {
 	var name, gender, mail, age string
@@ -47,8 +49,33 @@ func judgeInput(number_input int) bool {
 	}
 }
 
-var sys_test = []map[string]string{}
-var select_number_bool string
+func watchCluster() {
+	var index_user int
+	for true {
+		fmt.Println("请输入你要查询的用户序号")
+		fmt.Scan(&index_user)
+		if judgeInput(index_user) == true {
+			fmt.Printf("序号为%d\n姓名:%s\n性别:%s\n年龄%s\n邮箱:%s\n",
+				index_user,
+				sys_test[index_user]["客户姓名"],
+				sys_test[index_user]["客户性别"],
+				sys_test[index_user]["客户年龄"],
+				sys_test[index_user]["客户邮箱"])
+		} else {
+			fmt.Println("您输入的序号不存在", "请重新输入")
+			continue
+		}
+		fmt.Print("是否返回上一层[y/n]：")
+		fmt.Scan(&select_number_bool)
+		if select_number_bool == "y" {
+			break
+		} else if select_number_bool == "n" {
+			continue
+		} else {
+			fmt.Println("请重新输入你的选择{y/n}")
+		}
+	}
+}
 
 func main() {
 
