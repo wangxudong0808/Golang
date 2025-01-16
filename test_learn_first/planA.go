@@ -6,8 +6,7 @@ import (
 
 // {"客户姓名": name,"客户性别": gender,"客户年龄": age,"客户邮箱": mail}}
 var sys_test = []map[string]string{}
-var select_number_bool string
-var name, gender, mail, age string
+var select_number_bool, name, gender, mail, age string
 
 func addCluster() { //添加用户
 	for true {
@@ -130,7 +129,7 @@ func show_user() {
 			value_number["客户年龄"],
 			value_number["客户邮箱"])
 	}
-}
+} //展示所有用户的数据
 
 func delete_user() {
 	fmt.Println("所有用户信息如下")
@@ -145,7 +144,7 @@ func delete_user() {
 	}
 	fmt.Println("删除之后的用户信息")
 	show_user()
-}
+} //删除指定序号的用户
 
 func main() {
 
