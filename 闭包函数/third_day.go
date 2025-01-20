@@ -7,9 +7,8 @@ func gongNeng() {
 }
 func boyDay(function_test1 func()) func() { //大函数叫装饰函数
 	var count = 0
-	f := function_test1
 	return func() {
-		f()
+		function_test1()
 		count++
 		fmt.Printf("调用功能%d次\n", count)
 	}
